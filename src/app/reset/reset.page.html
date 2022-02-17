@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" style="color: black;"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mot de passe Oublié</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content>
+    <img src="assets/splashLogin2.png ">
+    <p class="pReset">Entrez votre email ci-dessous et nous vous enverrons vos instructions pour récupérer votre mot de passe.</p>
+    <form class="formReset">    
+      <ion-item lines="full">
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input type="email" #email required></ion-input>
+      </ion-item> 
+      <div class="test">
+      <button class="resetBtn" type="submit" (click)="recover(email)" expand="block">Mot de passe oublié ?</button>
+    </div>
+    </form>
+</ion-content>

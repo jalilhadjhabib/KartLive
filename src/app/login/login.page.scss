@@ -1,0 +1,245 @@
+#custom-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100000;
+    width:100%;
+    background-color: #002a3e;
+    
+  }
+  
+  .flb {
+    background-color: white;
+    height:100%;
+    width:100%;
+    animation: pulse 1s linear forwards;
+    
+  }
+  .Aligner-item {
+    max-width: 50%;
+  }
+  .Aligner-item--top {
+    align-self: flex-start;
+  }
+  .Aligner-item--bottom {
+    align-self: flex-end;
+    
+  }
+  #custom-overlay img {
+    animation-iteration-count: 1;
+    display: block;
+    margin: auto;
+    margin-top: 70px;
+    width: 80%;
+    height: auto;
+    animation: animation 3100ms linear infinite both;
+    animation-delay: 1s;
+  }
+  @keyframes pulse {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+
+
+  .sk-cube-grid {
+    width: 60px;
+    height: 60px;
+    margin: 100px auto;
+  }
+  
+  .sk-cube-grid .sk-cube {
+    width: 33%;
+    height: 33%;
+    background-color: red;
+    float: left;
+    -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+            animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+  }
+  .sk-cube-grid .sk-cube1 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  .sk-cube-grid .sk-cube2 {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; }
+  .sk-cube-grid .sk-cube3 {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s; }
+  .sk-cube-grid .sk-cube4 {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s; }
+  .sk-cube-grid .sk-cube5 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  .sk-cube-grid .sk-cube6 {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; }
+  .sk-cube-grid .sk-cube7 {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s; }
+  .sk-cube-grid .sk-cube8 {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s; }
+  .sk-cube-grid .sk-cube9 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  
+  @-webkit-keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1);
+    } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1); 
+    }
+  }
+  
+  @keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1);
+    } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1);
+    } 
+  }
+  
+  .body{
+    --background: white;  
+    text-align:center;
+  }
+  img{
+    max-width: 100%;
+
+}
+    
+        
+            .signInNormal{
+                background-color: #db4437;
+                direction: ltr;
+                font-weight: 500;
+                height: auto;
+                line-height: normal;
+                max-width: 220px;
+                min-height: 40px;
+                padding: 8px 16px;
+                text-align: center;
+                width: 100%;
+                margin-top: 40px;
+                box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+                font-family: Roboto,Helvetica,Arial,sans-serif;
+                }
+            .spanSignInNormal{
+                display: table-cell;
+                vertical-align: middle;
+            }
+            .spanSignInNormalImg{
+                border: none;
+                display: inline-block;
+                height: 18px;
+                vertical-align: middle;
+                width: 18px;
+            }
+            .spanSignInNormalText{
+                color: #fff;
+                display: table-cell;
+                font-size: 14px;
+                padding-left: 16px;
+                text-transform: none;
+                vertical-align: middle;
+            }
+            .signInGoogle{
+                background-color: white;
+                box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+                direction: ltr;
+                font-weight: 500;
+                height: auto;
+                line-height: normal;
+                max-width: 220px;
+                min-height: 40px;
+                padding: 8px 16px;
+                text-align: center;
+                width: 100%;
+                margin-top: 20px;
+                font-family: Roboto,Helvetica,Arial,sans-serif;
+                }
+                .spanSignInGoogle{
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+                .spanSignInGoogleImg{
+                    border: none;
+                    display: inline-block;
+                    height: 18px;
+                    vertical-align: middle;
+                    width: 18px;
+                }
+                .spanSignInGoogleText{
+                    color: #757575;
+                    display: table-cell;
+                    font-size: 14px;
+                    padding-left: 16px;
+                    text-transform: none;
+                    vertical-align: middle;
+                }
+                .signInFacebook{
+                    background-color: #3b5998;
+                    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+                    color: white;
+                    direction: ltr;
+                    font-weight: 500;
+                    height: auto;
+                    line-height: normal;
+                    max-width: 220px;
+                    min-height: 40px;
+                    padding: 8px 16px;
+                    text-align: center;
+                    width: 100%;
+                    margin-top: 20px;
+                    font-family: Roboto,Helvetica,Arial,sans-serif;
+                    }
+                    .spanSignInFacebook{
+                        display: table-cell;
+                        vertical-align: middle;
+                    }
+                    .spanSignInFacebookImg{
+                        border: none;
+                        display: inline-block;
+                        height: 18px;
+                        vertical-align: middle;
+                        width: 18px;
+                    }
+                    .spanSignInFacebookText{
+                        color: #fff;
+                        display: table-cell;
+                        font-size: 14px;
+                        padding-left: 16px;
+                        text-transform: none;
+                        vertical-align: middle;
+                    }
+                    .footerConf{
+                        padding: 0 24px;
+                    }
+                    .pFooter{
+                        color: #757575;
+                        direction: ltr;
+                        font-size: 12px;
+                        line-height: 16px;
+                        margin-bottom: 24px;
+                        margin-top: 20px;
+                    }
+                    ion-content {
+                      // overwrite inline styles
+                      --offset-bottom: auto!important;
+                      --overflow: hidden;
+                      overflow: auto;
+                      background-color: rgb(240, 232, 232);
+                      &::-webkit-scrollbar {
+                        display: none;
+                      }
+                    }

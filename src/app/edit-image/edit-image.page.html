@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" style="color: black;"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Modifier votre photo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="form">
+  
+  <center><div text-center>
+   <img *ngIf="img && !urlImage" src="{{img}}" class="circle"> 
+    <img *ngIf="urlImage"  [src]="urlImage | async" class="circle" > 
+   
+    <br>
+    <br>
+    <img *ngIf="!urlImage && !img"  src="assets/user.svg" width="200px"> <br>
+    </div></center>
+
+
+  <div margin-bottom margin-top text-center>
+    <label class="custom-file-upload" style="margin:auto;max-width:400px">
+      <input id="file-upload" type="file" accept=".png, .jpg"
+        (change)="onUpload($event)" />
+      <ion-icon margin-right name="cloud-download"></ion-icon>Sélectionnez une photo
+    </label>
+  </div>
+
+  <center><button class="saveBtn" (click)="save()"  slot="end">Appliquer</button></center>
+
+  
+  
+
+
+
+  <input #imageProd type="hidden" [value]="urlImage | async" style="color:black;">
+  <br><br>
+  <!-- <ion-button mode="ios" size="large" class="main-container" color="light" expand="block">
+    Save</ion-button> -->
+  </div>
+</ion-content>

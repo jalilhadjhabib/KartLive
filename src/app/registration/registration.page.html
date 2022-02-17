@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" style="color: black;"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Inscription</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <form>    
+    <ion-item lines="full">
+      <ion-label position="floating">E-mail</ion-label>
+      <ion-input type="email" #email required></ion-input>
+    </ion-item> 
+    <ion-item lines="full">
+      <ion-label position="floating">Mot de passe</ion-label>
+      <ion-input name="password" id="password" type="password" #password></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Confirmez votre mot de passe</ion-label>
+      <ion-input type="password" name="confirm_password" id="confirm_password" #password></ion-input>
+    </ion-item>
+    <p id='message' style="margin: 20px;"></p>
+
+
+
+
+
+
+<div>
+    <ion-row class="rowLogin">
+      <ion-col> 
+      <button class="signUpBtn" type="submit" (click)="signUp(email, password)" expand="block">S'inscrire</button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="rowLogin">
+      <ion-col> 
+        <p>
+          Vous avez un de compte ? <button (click)="goToLogin2()">Connectez-vous</button>
+        </p>
+      </ion-col>
+    </ion-row>
+    </div>
+  </form>
+</ion-content>

@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic HTML to PDF
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button color="danger" fill="outline" (click)="createPdf()">
+        View PDF
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="print-pdf">
+    <div class="print-wrapper" id="print-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Designation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-column="First Name">James</td>
+            <td data-column="Last Name">Matman</td>
+            <td data-column="Job Title">Chief Sandwich Eater</td>
+          </tr>
+          <tr>
+            <td data-column="First Name">Andor</td>
+            <td data-column="Last Name">Nagy</td>
+            <td data-column="Job Title">Designer</td>
+          </tr>
+          <tr>
+            <td data-column="First Name">Tamas</td>
+            <td data-column="Last Name">Biro</td>
+            <td data-column="Job Title">Game Tester</td>
+          </tr>
+          <tr>
+            <td data-column="First Name">Zoli</td>
+            <td data-column="Last Name">Mastah</td>
+            <td data-column="Job Title">Developer</td>
+          </tr>
+          <tr>
+            <td data-column="First Name">Szabi</td>
+            <td data-column="Last Name">Nagy</td>
+            <td data-column="Job Title">Chief Sandwich Eater</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+</ion-content>

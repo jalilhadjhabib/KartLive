@@ -1,0 +1,10 @@
+ion-content {
+    // overwrite inline styles
+    --offset-bottom: auto!important;
+    --overflow: hidden;
+    overflow: auto;
+    background-color: rgb(240, 232, 232);
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }

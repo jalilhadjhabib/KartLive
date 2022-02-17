@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-menu-button style="color: black;"></ion-menu-button>
+  </ion-buttons>
+  
+  </ion-toolbar>
+</ion-header>
+
+
+  <ion-menu contentId="content" >
+    <ion-header class="test">
+      <ion-toolbar class="test"> 
+        <ion-title class="test">
+          Menu
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
+          <ion-item [routerLink]="p.url" routerDirection="root" [class.active-item]="selectedPath === p.url">
+            {{ p.title }}
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+    <center><p style="margin: 20px;color: grey;font-size: 12px;">Tous Droits Réservés ©2022</p>
+    <p style="margin: 20px;color: grey;font-size: 12px;">V1.0.0</p></center>
+
+  
+  </ion-menu>
+  <ion-router-outlet id="content" main></ion-router-outlet>
+
+
+
+
+
+
+
+  <ion-tabs>
+
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="tab1" class="tab">
+        <ion-icon name="home" class="tab"></ion-icon>
+  
+      </ion-tab-button>
+  
+      <ion-tab-button tab="tab2">
+        <ion-icon name="calendar"></ion-icon>
+  
+      </ion-tab-button>
+  
+      <ion-tab-button tab="tab3">
+        <ion-icon name="person"></ion-icon>
+  
+      </ion-tab-button>
+    </ion-tab-bar>
+  
+  </ion-tabs>
+
+
+
+
+  
+
+

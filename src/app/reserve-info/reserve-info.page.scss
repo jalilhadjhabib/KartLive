@@ -1,0 +1,24 @@
+:host ::ng-deep {
+    .monthview-container {
+        height: auto !important;
+    }
+
+    .event-detail-container {
+        display: none;
+    }
+}
+
+ion-toolbar {
+    font-size: 15px;
+    text-align-last: center;
+}
+ion-content {
+    // overwrite inline styles
+    --offset-bottom: auto!important;
+    --overflow: hidden;
+    overflow: auto;
+    background-color: white;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }

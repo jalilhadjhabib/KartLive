@@ -1,0 +1,35 @@
+.indicator-container {
+	padding: 0.1rem;
+	padding-bottom: 0.4rem;
+	height: 40px; // Size of day container
+	.event-indicator {
+	  background: var(--ion-color-success);
+	  width: 100%;
+	  height: 5px;
+	  border-radius: 5px;
+	}
+  }
+  .with-event {
+	background-color: var(--ion-color-primary);
+	border-radius: 15px;
+  }
+
+  .addBtn{
+	  width: 50%;
+	  height: 50%;
+	  background-color: blue;
+  }
+  ion-content {
+	// overwrite inline styles
+	--offset-bottom: auto!important;
+	--overflow: hidden;
+	overflow: auto;
+	background-color: rgb(240, 232, 232);
+	&::-webkit-scrollbar {
+	  display: none;
+	}
+  }
+  .test{
+	  background-color: white;
+	  --background:white;
+  }

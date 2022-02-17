@@ -1,0 +1,107 @@
+<!--<ion-item>
+    <ion-label>Commentaire:</ion-label>
+    <ion-input [(ngModel)]="commentaire" type="text" placeholder="Entrez du texte"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Note:</ion-label>
+    <ion-select [(ngModel)]="note" placeholder="Select One">
+      <ion-select-option value="1">1</ion-select-option>
+      <ion-select-option value="2">2</ion-select-option>
+      <ion-select-option value="3">3</ion-select-option>
+      <ion-select-option value="4">4</ion-select-option>
+      <ion-select-option value="5">5</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item *ngFor="let item of items | async">
+    <ion-label>{{ item.text }}</ion-label>
+    <ion-icon name="star" style="color: yellow;"></ion-icon>
+    <ion-label>{{ item.note }}</ion-label>
+</ion-item>
+<ion-button (click)="addCommentaire()" expand="block">Ajouter</ion-button>-->
+
+
+
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="test" >  
+
+  
+  <div class = "content">
+    <img src="assets/splashLogin2.png" style="border-radius: 12px;">
+    <span><!-- line here --></span>
+    <p>Kart Live est un lieu de détente entre amis ou en famille, une piste de karting de 340m linéaire ainsi qu'un espace de restauration.
+      Disons le, piloter ça donne faim.</p>
+  </div>
+
+
+
+  
+  <br>
+  <ion-slides pager="true" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+    <span><!-- line here --></span>
+    <ion-slide class = "contentimg">
+      <img src="assets/car1.jpg">
+    </ion-slide>
+    <ion-slide class = "contentimg">
+      <img src="assets/car2.jpg">
+    </ion-slide>
+    <ion-slide class = "contentimg">
+      <img src="assets/car3.jpg">
+    </ion-slide>
+  </ion-slides>
+
+  <br><br>
+  <div class = "content">
+    <br>
+    <ion-icon name="pizza-outline" style="font-size: 40px;"></ion-icon><h1>Nos menus</h1>
+    <span><!-- line here --></span>
+    <p>Libanais</p>
+    <p>Pizzas</p>
+    <p>Burgers</p>
+    <p>Tacos</p>
+    <p>Plats</p>
+    <p>Desserts</p>
+    <p>Boissons</p>
+  </div>
+
+  <br><br>
+  <div class = "content">
+    <br>
+    <ion-icon name="alarm-outline" style="font-size: 40px;"></ion-icon><h1>Nos horaires</h1>
+    <span><!-- line here --></span>
+    <p style="font-weight: bold;">Lundi</p>
+    <p>15:00 - 22:00</p>
+    <p style="font-weight: bold;">Mardi</p>
+    <p>15:00 - 22:00</p>
+    <p style="font-weight: bold;">Mercredi</p>
+    <p>15:00 - 22:00</p>
+    <p style="font-weight: bold;">Jeudi</p>
+    <p>15:00 - 22:00</p>
+    <p style="font-weight: bold;">Vendredi</p>
+    <p>15:00 - 22:00</p>
+    <p style="font-weight: bold;">Samedi</p>
+    <p>15:00 - 22:00</p>
+    <p style="font-weight: bold;">Dimanche</p>
+    <p>15:00 - 22:00</p>
+  </div>
+
+
+  <br><br>
+  <div class = "content">
+    <br>
+    <ion-icon name="location-outline" style="font-size: 40px;"></ion-icon><h1>Ou nous trouver ?</h1>
+    <span><!-- line here --></span>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1621.4933877562405!2d-0.5984595556821156!3d35.628052522748845!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7e61d98a5b00f7%3A0xf547e236d6cac63b!2sKart%20Live%20-%20Karting%20Oran!5e0!3m2!1sfr!2sdz!4v1643631954449!5m2!1sfr!2sdz" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <br>
+  </div>
+  <br><br>
+
+</ion-content>

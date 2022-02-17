@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button (click)="close()">
+      <ion-icon name="close" slot="icon-only"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Formulaire de réservation</ion-title>
+  <ion-buttons slot="end">
+    <ion-button (click)="save()" [disabled]="!eventFormValid">
+      <ion-icon name="checkmark" slot="icon-only"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+  </ion-header>
+<ion-content class="ion-padding">
+  <!-- Card for adding a new event -->
+    <form #eventForm="ngForm" (ionChange)="setFormValid(eventForm)">
+      <ion-item>
+        <ion-input type="text" placeholder="Status de l'évenement" name='title' [(ngModel)]="event.title" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="Decription" name='desc' [(ngModel)]="event.desc" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Début:</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY HH:mm" pickerFormat="MMM D:HH:mm" name='startTime' [(ngModel)]="event.startTime" required
+          [min]="minDate"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Fin:</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY HH:mm" pickerFormat="MMM D:HH:mm" name='endTime' [(ngModel)]="event.endTime" [disabled]="event.allDay" [required]="!event.allDay"
+          [min]="minDate"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Toute la journée</ion-label>
+        <ion-checkbox name='allDay' [(ngModel)]="event.allDay"></ion-checkbox>
+      </ion-item>
+      
+
+    </form>
+    
+</ion-content>

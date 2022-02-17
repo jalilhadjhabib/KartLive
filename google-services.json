@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "315268073926",
+    "firebase_url": "https://thelast-18aa5-default-rtdb.firebaseio.com",
+    "project_id": "thelast-18aa5",
+    "storage_bucket": "thelast-18aa5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:315268073926:android:1365db09095f3d1c178ac7",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "315268073926-lgago2v31bh6cpo2nidclb6drch11s76.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUMM7rn2Fbvx3856_1wLh1bAJo33-dKdw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "315268073926-lgago2v31bh6cpo2nidclb6drch11s76.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "315268073926-eh2fs6g7udvkl3bqi5l4pdkulb5ubekf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.ionic.starter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

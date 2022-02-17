@@ -1,0 +1,140 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+
+    
+
+    <div class="header">
+      <div class="space-between">
+      </div>
+    </div>
+
+    <div class="flex">
+      <div class="box-border">
+        <div class="border-white">
+          <!--<div class="img-box" *ngFor="let image of images">-->
+          <div class="img-box">
+            <img *ngIf="img && !urlImage" src="{{img}}" class="circle"> 
+            <img *ngIf="urlImage"  [src]="urlImage | async" class="circle" > 
+            <img *ngIf="!urlImage && !img"  src="assets/user.svg">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+  
+
+
+
+
+    <div class="name">
+      <div>
+        <h2>{{ authService.userData.displayName }}</h2>
+        <p style="color:grey;font-size: 14px;">{{ authService.userData.email }}</p>
+      </div>
+    </div>
+    <br>
+      <ion-list class="sideMenu">
+        <button class="btnItem" (click)="openProfileEditModal()"><ion-item>
+          <ion-icon name="construct" slot="start" class="iconList"></ion-icon>
+          <ion-label style="font-size: 14px;">Modifier votre profil</ion-label>
+        </ion-item></button>
+        <button class="btnItem" (click)="gotoImage()"><ion-item>
+          <ion-icon name="camera" slot="start" class="iconList"></ion-icon>
+          <ion-label style="font-size: 14px;">Modifier votre photo</ion-label>
+        </ion-item></button>
+        <!--<button class="btnItem" (click)="goToTerms()"><ion-item>
+          <ion-icon name="ribbon" slot="start" class="iconList"></ion-icon>
+          <ion-label style="font-size: 14px;">Mentions légales</ion-label>
+        </ion-item></button>
+        <button class="btnItem" (click)="goToPrivacy()"><ion-item>
+          <ion-icon name="reader" slot="start" class="iconList"></ion-icon>
+          <ion-label style="font-size: 14px;">Politique de confidentialité</ion-label>
+        </ion-item></button>-->
+        <button class="btnItem" (click)="authService.SignOut()"><ion-item>
+          <ion-icon name="log-out" slot="start" class="iconList"></ion-icon>
+          <ion-label style="font-size: 14px;">Se déconnecter</ion-label>
+        </ion-item></button>
+        <button class="btnItem" (click)="openDeleteAccountAlert()"><ion-item color="danger">
+          <ion-icon style="color: white;" name="trash" slot="start" class="iconList"></ion-icon>
+          <ion-label style="font-size: 14px;">Supprimez votre compte</ion-label>
+        </ion-item></button>
+      </ion-list>
+      
+
+      
+        
+         
+
+      
+    </ion-content>
+
+    <!--<ion-card *ngFor="let image of images">
+      <ion-img [src]="image.url"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle>{{ image.name }}</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>-->
+
+     <!--<center>
+      <div class="btn-group">
+        <div>
+          <button class="signInGoogle" (click)="goToEditProfile()">
+            <span class="spanSignInGoogle">
+              <img class="spanSignInGoogleImg" src="../../assets/edit.png">
+            </span>
+            <span class="spanSignInGoogleText">
+              Modifier le profil
+            </span>
+             </button>
+        </div>
+        <div>
+          <button class="signInGoogle" (click)="goToTerms()">
+            <span class="spanSignInGoogle">
+              <img class="spanSignInGoogleImg" src="../../assets/auction.png">
+            </span>
+            <span class="spanSignInGoogleText">
+              Mentions légales
+            </span>
+             </button>
+        </div>
+        <div>
+          <button class="signInGoogle" (click)="goToPrivacy()">
+            <span class="spanSignInGoogle">
+              <img class="spanSignInGoogleImg" src="../../assets/document.png">
+            </span>
+            <span class="spanSignInGoogleText">
+              Confidentialité
+            </span>
+             </button>
+        </div>
+        <div>
+          <button class="signInGoogle" (click)="authService.SignOut()">
+            <span class="spanSignInGoogle">
+              <img class="spanSignInGoogleImg" src="../../assets/logout.png">
+            </span>
+            <span class="spanSignInGoogleText">
+              Se déconnecter
+            </span>
+             </button>
+        </div>
+        <br>
+      </div>
+     </center> -->
+    
+
+
+

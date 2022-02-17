@@ -1,0 +1,15 @@
+h1,h2,h3,h4,h5{
+    text-align: center;
+    align-items: center;
+    color: grey;
+}
+ion-content {
+    // overwrite inline styles
+    --offset-bottom: auto!important;
+    --overflow: hidden;
+    overflow: auto;
+    background-color: rgb(240, 232, 232);
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }

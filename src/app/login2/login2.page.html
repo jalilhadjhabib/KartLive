@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" style="color: black;"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Connexion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+<ion-content>
+  <form>    
+    <ion-item lines="full">
+      <ion-label position="floating">E-mail</ion-label>
+      <ion-input type="email" #email required></ion-input>
+    </ion-item> 
+
+    <ion-item lines="full">
+      <ion-label position="floating">Mot de passe</ion-label>
+      <ion-input type="password" #password required></ion-input>
+    </ion-item>
+    
+    <ion-row class="rowLogin">
+      <ion-col> 
+      <button class="loginBtn" type="submit" (click)="logIn(email, password)" expand="block">Se connecter</button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="rowLogin">
+      <ion-col> 
+      <button class="forgetBtn" type="submit" (click)="goToResetPassword()" expand="block">Mot de passe oublié ?</button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="rowLogin">
+      <ion-col> 
+        <p>
+          Vous n'avez pas de compte ? <button (click)="goToRegister()">Inscrivez-vous</button>
+        </p>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

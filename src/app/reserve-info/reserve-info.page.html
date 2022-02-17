@@ -1,0 +1,84 @@
+<ion-header [translucent]="true">
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button text="" style="color: black;"></ion-back-button>
+  </ion-buttons>
+  <ion-title>Formulaire de réservation</ion-title>
+  <ion-buttons slot="end">
+    <ion-button (click)="GravarAgenda()">
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  
+  <ion-item>
+    <ion-label position="stacked">Nom/Prénom:</ion-label>
+    <form [formGroup]="todo">
+    <ion-input type="text" [(ngModel)]="data.name" formControlName="name"></ion-input>
+    </form>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Email:</ion-label>
+    <form [formGroup]="todo">
+    <ion-input type="email" [(ngModel)]="data.email" formControlName="email"></ion-input>
+  </form>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Numero :</ion-label>
+    <form [formGroup]="todo">
+    <ion-input type="tel" [(ngModel)]="data.number" formControlName="number"></ion-input>
+  </form>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Type:</ion-label>
+    <form [formGroup]="todo">
+    <ion-select [(ngModel)]="data.type" formControlName="type">
+      <ion-select-option value="Mariage">Mariage</ion-select-option>
+      <ion-select-option value="Fêtes">Fêtes</ion-select-option>
+      <ion-select-option value="Anniversaire">Anniversaire</ion-select-option>
+      <ion-select-option value="VIP">VIP</ion-select-option>
+    </ion-select>
+  </form>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Début:</ion-label>
+    <form [formGroup]="todo">
+    <ion-datetime formControlName="start" displayFormat="HH:mm" pickerFormat="HH:mm" name='startTime' [(ngModel)]="data.startTime" required
+      [min]="minDate"></ion-datetime>
+      </form>
+  </ion-item>
+  <ion-item>
+    <ion-label>Fin:</ion-label>
+    <form [formGroup]="todo">
+    <ion-datetime formControlName="end" displayFormat="HH:mm" pickerFormat="HH:mm" name='endTime' [(ngModel)]="data.endTime" [disabled]="event.allDay" [required]="!event.allDay"
+      [min]="minDate"></ion-datetime>
+      </form>
+  </ion-item>
+  <p style="color: red;margin: 20px;">*Veuillez s'il vous plait choisir la tranche horaire exacte pour que votre réservation soit prise en compte</p>
+  <!--<ion-item>
+    <ion-label position="stacked"></ion-label>
+    <p [(ngModel)]="data.vip" name="fieldName" ngDefaultControl>Prix: {{prix3}} DA</p>
+  </ion-item>-->
+
+  <ion-button [disabled]="!todo.valid" *ngIf="editing == false" color="danger" (click)="saveData()" expand="block">
+    Réserver
+  </ion-button>
+
+  <ion-button [disabled]="!todo.valid" *ngIf="editing == true" color="danger" (click)="updateData()" expand="block">
+    Modifier
+  </ion-button>
+
+  
+
+    
+
+
+
+</ion-content>

@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Admin
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item-group>
+    <ion-item *ngFor="let data of Data">
+      <ion-label>
+        <ion-icon slot="start" color="secondary" name="radio-button-on-outline"></ion-icon>
+        <strong>
+          {{data.name}}
+        </strong>
+        <p>
+          {{data.email}}
+        </p>
+        <p>
+          {{data.number}}
+        </p>
+        <p>
+          {{data.type}}
+        </p>
+        <p>
+          Début: {{data.startTime}}
+        </p>
+        <p>
+          Fin: {{data.endTime}}
+        </p>
+      </ion-label>
+      <ion-icon style="font-size: 30px;" color="warning" (click)="id = data.id;openModalEditPage()" name="cog-outline">
+      </ion-icon>
+      <ion-icon style="margin-left: 10px;" (click)="id = data.id;DeleteAlert()" color="danger" name="trash-outline">
+      </ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="openModalAddPage()" color="secondary">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

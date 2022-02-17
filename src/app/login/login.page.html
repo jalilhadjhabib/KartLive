@@ -1,0 +1,59 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="assets/splash.png ">
+    <div class="sk-cube-grid">
+      <div class="sk-cube sk-cube1"></div>
+      <div class="sk-cube sk-cube2"></div>
+      <div class="sk-cube sk-cube3"></div>
+      <div class="sk-cube sk-cube4"></div>
+      <div class="sk-cube sk-cube5"></div>
+      <div class="sk-cube sk-cube6"></div>
+      <div class="sk-cube sk-cube7"></div>
+      <div class="sk-cube sk-cube8"></div>
+      <div class="sk-cube sk-cube9"></div>
+    </div>
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+
+
+
+
+<ion-content class="body">
+  <img src="assets/splash.png " style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+  <div>
+  <div>
+    <button class="signInNormal" (click)="goToLogin2()">
+      <span class="spanSignInNormal">
+        <img class="spanSignInNormalImg" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/mail.svg">
+      </span>
+      <span class="spanSignInNormalText">
+        Se connecter avec une adresse e-mail
+      </span>
+    </button>
+  </div>
+  <div>
+    <button class="signInGoogle" (click)="authService.GoogleAuth()">
+      <span class="spanSignInGoogle">
+        <img class="spanSignInGoogleImg" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg">
+      </span>
+      <span class="spanSignInGoogleText">
+        Se connecter avec Google
+      </span>
+       </button>
+  </div>
+  <div>
+    <button class="signInFacebook" (click)="authService.facebookWeb()">
+      <span class="spanSignInFacebook">
+        <img class="spanSignInFacebookImg" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/facebook.svg">
+      </span>
+      <span class="spanSignInFacebookText">
+      Se connecter avec Facebook
+      </span>
+    </button>
+  </div>
+</div>
+<div class="footerConf"><p class="pFooter">En continuant, vous acceptez les <button style="background-color: white;color: blue;text-decoration: underline;" (click)="goToTerms()">Conditions d'utilisation</button>et les <button style="background-color: white;color: blue;text-decoration: underline;" (click)="goToPrivacy()"> Règles de confidentialité.</button></p></div>
+</ion-content>
+

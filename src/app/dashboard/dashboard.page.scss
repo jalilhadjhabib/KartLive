@@ -1,0 +1,24 @@
+.sideMenu{
+    margin-top:40px;
+    background-color: blue;
+
+}
+.test{
+    --background:rgb(250, 234, 234);
+}
+
+ion-tab-button[aria-selected=true] {
+    color:red !important;
+ }
+ ion-tab-button:hover{
+    ion-icon{
+        color: red;
+    }
+}
+
+.active-item{
+    border-left: 8px solid var(--ion-color-primary);
+}
+.new-background-color{
+    --background:rgb(240, 232, 232);
+}

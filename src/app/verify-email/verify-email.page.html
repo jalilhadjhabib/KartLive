@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+    </ion-buttons>
+    <ion-title>Vérification</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="assets/splashLogin2.png ">
+    <div class="verifyCenter">
+      <center><p class="p1Verify">
+        Vous avez pas reçu votre mail de confirmation ?
+      </p></center>
+      <button class="verifyBtn" type="submit" [disabled]="!allowResend" 
+      (click)="resendVerification()" expand="block">
+        ({{ count }}) Renvoyer l'e-mail de vérification
+      </button> 
+      <center><p class="p2Verify">
+        Vous avez déjà confirmé votre e-mail ?
+      </p></center>
+      <button class="verifyBtn" type="submit" (click)="authService.SignOut()" expand="block">
+        Connectez-vous !
+      </button>
+      <br><br>
+      <!--<button class="changeBtn" type="submit" (click)="openProfileEditModal()" expand="block">
+        Changer votre e-mail
+      </button>-->
+    </div>
+  
+</ion-content>

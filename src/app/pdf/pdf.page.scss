@@ -1,0 +1,23 @@
+.orderSummary p {
+    margin: 0;
+    color: gray;
+  }
+  ion-thumbnail {
+    width: 100px;
+    height: 100px;
+    margin-right: 50px;
+  }
+  .subTitle {
+    margin-left: 20px;
+    text-decoration: line-through;
+  }
+  ion-content {
+	// overwrite inline styles
+	--offset-bottom: auto!important;
+	--overflow: hidden;
+	overflow: auto;
+	background-color: rgb(240, 232, 232);
+	&::-webkit-scrollbar {
+	  display: none;
+	}
+  }

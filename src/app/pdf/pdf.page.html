@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-button slot="icon">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      My Orders
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="ion-text-center ion-margin-top ion-margin-bottom">
+    <div class="orderSummary">
+      <h4>Grand Total :${{order.grandTotal}}</h4>
+      <p>Number of products : {{order.products.length}}</p>
+      <ion-text [color]="order.status=='Delivered'?'success':'primary'">
+        Delivery Status: {{order.delivery_status}}</ion-text>
+      <p>Delivery Date: {{order.createdAt}}</p>
+    </div>
+  </div>
+  <ion-card class="ion-no-padding">
+    <ion-item *ngFor="let product of order.products">
+      <ion-thumbnail>
+      </ion-thumbnail>
+      <ion-label>
+        <h4>{{product.name}}</h4>
+
+        <p>$ {{product.salePrice}} <span class="subTitle" *ngIf="product.offer !== '' && product.offer !== '0'">$
+            {{product.regularPrice}}</span>
+        </p>
+        <p>Quantity : {{product.units}}</p>
+      </ion-label>
+    </ion-item>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="8" class="ion-padding">
+        <ion-row>
+          <ion-col class="bold">
+            <h5 class="ion-no-margin">Address:</h5>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="address-text">
+            {{order.address.flatNumber}} {{order.address.street}} {{order.address.locality}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="bold">
+            <h5 class="ion-no-margin"> Delivered To:</h5>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="address-text">
+            {{order.address.title}} {{order.address.name}}
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button (click)="openInvoice(order)">
+          Invoice
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
